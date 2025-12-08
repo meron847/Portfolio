@@ -1,0 +1,88 @@
+/* starting variables for the site */
+:root {
+  --white: #f9faff;
+  --platinum: #e3e4e8;
+  --windsurfing: #32779b;
+  --marina: #5a91c7;
+  --gray: #9a9a9a;
+  --onyx: #3c3d44;
+  --charcoal: #343c47;
+  --corners: 24px 0;
+  --base-font-size: 1rem;
+}
+/* set the box sizing to border-box for layouts */
+html {
+  box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin:0;
+  padding:0;
+}
+/* Basic page set to our font size and font family. Link to the font family in CodePen under Settings - CSS - External stylesheets and pens. */
+body {
+  font-size: var(--base-font-size);
+  font-family: "Inter", sans-serif;
+  background-color: var(--platinum);
+  color: var(--onyx);
+}
+.wrapper {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+h2 {
+    color:#32779b;
+    margin: 0;
+    font-size: calc(var(--base-font-size) * 2.9);
+    text-transform  : upprcase;
+    color: var(--windsurfing);
+    letter-spacing: 0.25em;
+}
+a {
+    color: var(--windsurfing);
+}
+a:hover {
+    color: var(--marina);
+}
+p {
+    line-height: 1.5;
+}
+/* make sure images don't exceed the width of the window */
+img {
+  max-width: 100%;
+}
+.icons {
+ list-style-type: none;
+ display: flex;
+ flex-direction: row;
+ justify-content: center;
+ flex-flow: row wrap;
+ gap: 2rem;
+}
+ul svg {
+    width: 36px;
+    height: 36px;
+}
+.social {
+    fill: var(--windsurfing);
+}
+.social:hover {
+    fill: var(--marina);
+}
+
+.main-article {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    text-align: center;
+}
+.main-article img {
+    margin: 0 auto;
+    object-fit: cover;
+    object-position: top;
+    height: 175px;
+    width: 300px;
+}
