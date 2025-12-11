@@ -138,5 +138,11 @@ footer {
     .icons {
       justify-content: flex-start;
     }
+    .footer{
+      text-align: left;
+    }
+    .footer-text {
+      grid-template-columns: repeat(3, 1fr);
+    }
   }
 }
