@@ -28,6 +28,7 @@ body {
   background-color: var(--platinum);
   color: var(--onyx);
 }
+
 .wrapper {
     max-width: 900px;
     margin: 0 auto;
@@ -127,7 +128,7 @@ footer {
     align-items: center;
     text-align: left;
   }
-  .main-article img {
+  /*.main-article img {
     max-height: 400px;
     margin: 0 0 0 auto;
     object-fit: none;
@@ -144,5 +145,71 @@ footer {
     .footer-text {
       grid-template-columns: repeat(3, 1fr);
     }
+  }*/
+}
+/* stayle projects  */
+   main {
+  margin-top: 5rem;
+  margin-bottom: 3rem;
+  text-align: center;
+}
+.projects {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 3rem;
+}
+.project {
+  background-color: var(--white);
+  padding: 3rem;
+  border-radius: var(--corners);
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+   width: 1000px;
+   
+}
+.project ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+.project li {
+  background-color: var(--marina);
+  color: var(--white);
+  padding: 0.5rem;
+  border-radius: var(--corners-sm);
+  font-size: calc(var(--base-font-size) * 0.85);
+}
+.project img {
+  grid-row: 1/2;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+.img-border {
+  border: 1px solid var(--onyx);
+}
+
+.text p {
+  width: 390px;
+}
+@media (min-width: 850px) {
+  main {
+    text-align: left;
   }
+  .project {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+  }
+  .project img {
+    grid-row: auto;
+  }
+  .project ul {
+    justify-content: flex-start;
+  } 
 }
