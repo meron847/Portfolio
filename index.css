@@ -13,6 +13,7 @@
 /* set the box sizing to border-box for layouts */
 html {
   box-sizing: border-box;
+  color-scheme: light dark;
 }
 *,
 *::before,
@@ -25,8 +26,8 @@ html {
 body {
   font-size: var(--base-font-size);
   font-family: "Inter", sans-serif;
-  background-color: var(--platinum);
-  color: var(--onyx);
+  /*background-color: var(--platinum);
+  color: var(--onyx);*/
 }
 
 .wrapper {
