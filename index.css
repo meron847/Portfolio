@@ -9,11 +9,21 @@
   --charcoal: #343c47;
   --corners: 24px 0;
   --base-font-size: 1rem;
+  --ld-bkgd: light-dark(var(--platinum), (var(--charcoal)));
+  --ld-text: light-dark(var(--onyx), (var(--white)));
+  --ld-projects: light-dark(var(var(--white), #2e313d));
+  --ld-blue: light-dark(var(--windsurfing), #6DaDD0);
 }
 /* set the box sizing to border-box for layouts */
 html {
   box-sizing: border-box;
   color-scheme: light dark;
+}
+html:has(#mode-switcher #light:checked) {
+  color-scheme: light;
+}
+html:has(#mode-switcher #dark:checked) {
+  color-scheme: dark;
 }
 *,
 *::before,
@@ -26,8 +36,8 @@ html {
 body {
   font-size: var(--base-font-size);
   font-family: "Inter", sans-serif;
-  /*background-color: var(--platinum);
-  color: var(--onyx);*/
+  background-color: var(--ld-bkgd);
+  color: var(--ld-text);
 }
 
 .wrapper {
@@ -40,11 +50,11 @@ h2 {
     margin: 0;
     font-size: calc(var(--base-font-size) * 2.9);
     text-transform  : upprcase;
-    color: var(--windsurfing);
+    color: var(--ld-blue);
     letter-spacing: 0.25em;
 }
 a {
-    color: var(--windsurfing);
+    color: var(--ld-blue);
 }
 a:hover {
     color: var(--marina);
@@ -69,7 +79,7 @@ ul svg {
     height: 36px;
 }
 .social {
-    fill: var(--windsurfing);
+    fill: var(--ld-blue);
 }
 .social:hover {
     fill: var(--marina);
@@ -129,24 +139,7 @@ footer {
     align-items: center;
     text-align: left;
   }
-  /*.main-article img {
-    max-height: 400px;
-    margin: 0 0 0 auto;
-    object-fit: none;
-    object-position: none;
-    height: auto;
-    width: auto;
-    overflow:auto;
-    .icons {
-      justify-content: flex-start;
-    }
-    .footer{
-      text-align: left;
-    }
-    .footer-text {
-      grid-template-columns: repeat(3, 1fr);
-    }
-  }*/
+ 
 }
 /* stayle projects  */
    main {
@@ -160,7 +153,7 @@ footer {
   gap: 3rem;
 }
 .project {
-  background-color: var(--white);
+  background-color: var(--ld-projects);
   padding: 3rem;
   border-radius: var(--corners);
   display: grid;
@@ -198,6 +191,19 @@ footer {
 .text p {
   width: 390px;
 }
+/*light/dark buttons  */
+fieldset{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  gap:3rem;
+  max-width: 300px;
+  margin:0 auto 5rem auto;
+}
+
+
+
+
 @media (min-width: 850px) {
   main {
     text-align: left;
